@@ -2,9 +2,9 @@
 go-chassis demo
 
 # 微服务列表
-* API 服务对外接口
-* RestServer Rest服务
-* RpcServer RPC服务
+* API： 服务对外接口
+* RestServer： Rest服务
+* RpcServer： RPC服务
 
 # 运行
 ```$xslt
@@ -38,7 +38,7 @@ Use "chassisdemo [command] --help" for more information about a command.
 ```$xslt
 heavyrains-MacBook-Pro:chassisdemo heavyrainlee$ ./chassisdemo api
 ```
-> 测试是使用单实例
+> 测试时使用单实例
 
 ### 运行Rest服务
 ```$xslt
@@ -53,7 +53,7 @@ heavyrains-MacBook-Pro:chassisdemo heavyrainlee$ ./chassisdemo rpcserver
 > 可以运行多个，运行多个时，可执行文件和config文件需要放到不同的目录，然后修改端口号
 
 # 测试
-当所有服务都成功启动后，执行下面两个命令检查加过
+当所有服务都成功启动后，执行下面两个命令检查结果
 ```$xslt
 curl localhost:5000/sayresthello/heavyrain
 curl localhost:5000/sayrpchello/heavyrain
