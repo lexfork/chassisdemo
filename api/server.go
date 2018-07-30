@@ -20,6 +20,9 @@ func (r *RestFulApi) SayRestHello(b *restful.Context) {
 	defer req.Close()
 	resp, err := core.NewRestInvoker().ContextDo(context.TODO(), req)
 	if err != nil {
+		b.WriteHeader(http.StatusServiceUnavailable)
+		b.Write([]byte("Server internal error"))
+
 		lager.Logger.Error("error", err)
 		return
 	}
