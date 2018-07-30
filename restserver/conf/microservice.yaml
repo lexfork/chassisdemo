@@ -1,0 +1,2 @@
+service_description:
+  name: RestServer # name your provider //Changed in cmd

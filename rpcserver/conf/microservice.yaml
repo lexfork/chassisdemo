@@ -1,0 +1,2 @@
+service_description:
+  name: RpcServer # name your provider //Changed in cmd

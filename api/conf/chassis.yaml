@@ -1,0 +1,7 @@
+cse:
+  loadbalance:                 # 全局负载均衡配置
+    strategy:
+      name: RoundRobin
+  protocols: # what kind of server you want to launch
+    rest: #launch a http server
+      listenAddress: 127.0.0.1:5000
