@@ -5,3 +5,7 @@ cse:
   protocols: # what kind of server you want to launch
     highway:
       listenAddress: 127.0.0.1:5002
+  handler:
+    chain:
+      Provider:
+        default: bizkeeper-provider

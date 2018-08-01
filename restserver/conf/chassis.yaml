@@ -1,7 +1,26 @@
 cse:
+  loadbalance:
+    strategy:
+      name: RoundRobin
+    retryEnabled: false
+    retryOnNext: 2
+    retryOnSame: 3
+    backoff:
+      kind: constant
+      minMs: 200
+      maxMs: 400
   service:
     registry:
+      type: servicecenter
+      scope: full
       address: http://127.0.0.1:30100
-  protocols: # what kind of server you want to launch
-    rest: #launch a http server
+      refreshInterval : 30s
+      watch: true
+  protocols:
+    rest:
       listenAddress: 127.0.0.1:5001
+      advertiseAddress: 127.0.0.1:5001
+  handler:
+    chain:
+      Provider:
+        default: bizkeeper-provider
